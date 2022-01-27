@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Css Cstom Property</title>
+    <style>
+        :root {
+            --main-color: tomato;
+            --main-border: 2px solid green;
+            --text-color: blue;
+            --main-background: lightgreen;
+            --text-size: 2em;
+            --side-width:200px;
+        }
+
+        .simple-box {
+            font-size: var(--text-size);
+            background-color: var(--main-background);
+            font-size: var(--text-size);
+            color: var(--text-color);
+            border: var(--main-border);
+            height: 300px;
+            width: 300px;
+        }
+
+        .simple-box p {
+            background-color: var(--main-color);
+        }
+         .side-nav,  .blogs{
+             float: left;
+             height: 500px;
+         }
+         aside{
+             background-color: var(--main-background);
+             width: 200px;
+         }
+         .blogs{
+             background-color: var(--text-color);
+             width: calc(100% - 2*var(--side-width));
+         }
+         footer{
+             clear: both;
+         }
+         section{
+             margin-top: 20px;
+         }
+    </style>
+</head>
+
+<body>
+    <div class="simple-box">
+        <p>Lorem ipsum dolor sit amet.</p>
+    </div>
+    <section class="">
+        <aside class="side-nav">
+            my side navigation
+        </aside>
+        <div class="blogs">
+            <h4>Blogs</h4>
+        </div>
+    </section>
+    <footer>copyright 2022</footer>
+</body>
+
+</html>
